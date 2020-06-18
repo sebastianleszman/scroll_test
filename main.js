@@ -8,6 +8,7 @@ const mainHeader = document.querySelector('.nav');
 let last = 0;
 let height = document.documentElement.scrollHeight;
 let client = document.documentElement.clientHeight;
+let max = height - client;
 
 document.addEventListener('scroll', function () {
   let ch = document.documentElement.clientHeight;
@@ -20,7 +21,7 @@ document.addEventListener('scroll', function () {
   scrollHeight.innerHTML = `scroll height ${sh}`;
   scrollTop.innerHTML = `scroll top ${scroll}`;
 
-  if (scroll > -1 && scroll < height - client) {
+  if (scroll > -1 && scroll < max) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
