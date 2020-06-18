@@ -13,14 +13,12 @@ document.addEventListener('scroll', function () {
   let ch = document.documentElement.clientHeight;
   let ih = document.documentElement.innerHeght;
   let sh = document.documentElement.scrollHeight;
-  let st = document.documentElement.scrollTop;
+  let scroll = document.documentElement.scrollTop;
 
   clientHeight.innerHTML = `client height ${ch}`;
   innerHeight.innerHTML = `inner height ${ih}`;
   scrollHeight.innerHTML = `scroll height ${sh}`;
-  scrollTop.innerHTML = `scroll top ${st}`;
-
-  let scroll = document.documentElement.scrollTop;
+  scrollTop.innerHTML = `scroll top ${scroll}`;
 
   if (scroll > -1 || height - scroll > client - 20) {
     if (scroll > last) {
