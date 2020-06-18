@@ -20,7 +20,7 @@ document.addEventListener('scroll', function () {
   scrollHeight.innerHTML = `scroll height ${sh}`;
   scrollTop.innerHTML = `scroll top ${scroll}`;
 
-  if (scroll > -1 || height - scroll > client - 20) {
+  if (scroll > -1 && height - scroll > client - 20) {
     if (scroll > last) {
       mainHeader.classList.add('hide');
     } else {
