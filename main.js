@@ -21,12 +21,12 @@ document.addEventListener('scroll', function () {
   scrollHeight.innerHTML = `scroll height ${sh}`;
   scrollTop.innerHTML = `scroll top ${scroll}`;
 
-  // if (scroll > -1 && scroll < max) {
-  //   if (scroll > last) {
-  //     mainHeader.classList.add('hide');
-  //   } else {
-  //     mainHeader.classList.remove('hide');
-  //   }
-  //   last = scroll;
-  // }
+  if (scroll > -1 && scroll < max) {
+    if (scroll > last) {
+      mainHeader.classList.add('hide');
+    } else {
+      mainHeader.classList.remove('hide');
+    }
+    last = scroll;
+  }
 });
